@@ -34,7 +34,7 @@ class Transfomer:
         valid = True
         for quad in chunkstring(frame, 4, 1):
             if "N" in quad:
-                any_N_seen = True
+                valid = False
                 break
             if len(quad) == 4:
                 counter[hash_kmer(quad)] += 1
